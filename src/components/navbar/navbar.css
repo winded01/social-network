@@ -1,0 +1,11 @@
+.navbar{
+    text-align: center;
+}
+.navbar a{
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+}
+.navbar a:hover{
+    background-color: brown;
+}

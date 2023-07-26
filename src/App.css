@@ -3,3 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: whitesmoke;
+  color: white;
+}
+.wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin : 0 auto;
+  display: grid;
+  grid-template-areas: 
+  'header header'
+  'navbar profile'
+  ;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 10fr;
+}
+.wrapper > div{
+  background-color: gray;
+  border-radius: 10px;
+}
+.header{
+  grid-area: header;
+}
+.navbar{
+  grid-area: navbar;
+}
+.profile{
+  grid-area: profile;
+}
