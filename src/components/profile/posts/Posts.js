@@ -9,10 +9,10 @@ function Posts() {
     <h2>Мои посты</h2>
     <input placeholder='введите текст' />
      <button>добавить пост</button>
-     <Post />
-     <Post />
-     <Post />
-     <Post />
+     <Post message='hello world' />
+     <Post message='hello' />
+     <Post message='im Elon' />
+
   </div>
   );
 }
