@@ -7,7 +7,7 @@ function Navbar() {
     <NavLink to='/profile'>Profile</NavLink>
     <NavLink to='/messages'>Messages</NavLink>
     <NavLink to='/users'>Users</NavLink>
-    <NavLink to='/dialog'>Dialogs</NavLink>
+    <NavLink to='/dialogs'>Dialogs</NavLink>
  </div>
   );
 }

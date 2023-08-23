@@ -12,7 +12,6 @@ function Profile() {
     <p>Илон Маск</p>
   </div>
   <Posts />
-  <Dialogs />
  </div>
   );
 }

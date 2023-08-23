@@ -1,17 +1,32 @@
 .dialogs{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 .dialog{
-    width: 40%;
+    width: 45%;
     margin: 5px;
 }
+.user_item{
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 16px;
+}
+.user_item a{
+ text-decoration:  none;
+ color: black;
+}
 .messages{
-    width:40%;
+    width:50%;
     margin: 10px;
     padding: 5px;
     background-color: black;
+    align-items: flex-start;
+}
+.message{
+    padding: 5px;
+    margin:10px ;
+    background-color: aqua;
+    border-radius: 15px;
 }
 .send_message{
     width: 50%;

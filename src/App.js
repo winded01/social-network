@@ -12,8 +12,9 @@ function App() {
   <Header /> 
   <Navbar />
   <Routes>
+    <Route exact path='/' Component={Profile}/>
   <Route exact path='/profile' Component={Profile}/>
-  <Route exact path='/dialog' Component={Dialogs}/>
+  <Route exact path='/dialogs' Component={Dialogs}/>
   </Routes>
   </BrowserRouter>
  </div>
