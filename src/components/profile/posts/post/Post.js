@@ -7,6 +7,7 @@ function Post(props) {
      <img src={avatar_mini} />
      <span>Илон Маск</span>
      <p>{props.message}</p>
+     <p><span>{props.likes}</span> Like</p>
     </div>
   );
 }

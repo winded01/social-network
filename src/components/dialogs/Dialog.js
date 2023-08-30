@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import DialogsItem from './dialogsItem/DialogsItem';
 import Message from './message/Message';
 let dialogNames=[{name:'Иван Иванов', id:1},{name:'Дональд Трамп', id:2},{name:'Билл Гейтс', id:3}];
-let messageItems=[{message:'Hello world',id:1},{message:'Hello',id:2},{message:'Hi',id:3},{message:'Hi',id:3},{message:'Hi',id:3},{message:'Hi',id:3}];
+let messageItems=[{message:'Hello world',id:1},{message:'Hello',id:2},{message:'Hi',id:3}];
 function Dialogs(props) {
   return (
  <div className='dialogs'>
