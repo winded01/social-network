@@ -7,10 +7,10 @@ function Dialogs(props) {
   return (
  <div className='dialogs'>
    <div className='dialog'>
-    {props.dialogsData.map((element)=><DialogsItem name={element.name} id={element.id}/>)}
+    {props.dialogsPage.dialogsData.map((element)=><DialogsItem name={element.name} id={element.id}/>)}
    </div>
     <div className='messages'>
-      {props.messagesData.map((element)=><Message message={element.message} id={element.id}/>)}
+     {props.dialogsPage.messagesData.map((element)=><Message message={element.message} id={element.id}/>)}
     </div>
    <div className='send_message'>
     <input placeholder='Введите сообшение' type='text'/>

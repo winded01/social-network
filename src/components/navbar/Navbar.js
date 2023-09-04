@@ -6,7 +6,7 @@ function Navbar() {
  <div className='navbar'>
     <NavLink to='/profile'>Profile</NavLink>
     <NavLink to='/messages'>Messages</NavLink>
-    <NavLink to='/users'>Users</NavLink>
+    <NavLink to='/friends'>Friends</NavLink>
     <NavLink to='/dialogs'>Dialogs</NavLink>
  </div>
   );
