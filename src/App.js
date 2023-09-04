@@ -5,16 +5,17 @@ import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
 import Dialogs from './components/dialogs/Dialog';
 import { BrowserRouter, Route, Routes  } from 'react-router-dom';
-function App() {
+
+function App(props) {
   return (
  <div className='wrapper'>
   <BrowserRouter>
   <Header /> 
   <Navbar />
   <Routes>
-    <Route exact path='/' Component={Profile}/>
-  <Route exact path='/profile' Component={Profile}/>
-  <Route exact path='/dialogs' Component={Dialogs}/>
+    <Route exact path='/' element={<Profile  postsData={props.state.postsData}/>}/>
+    <Route exact path='/profile'element={<Profile postsData={props.state.postsData}/>}/>
+    <Route exact path='/dialogs'element={<Dialogs dialogsData={props.state.dialogsData} messagesData={props.state.messagesData}/>}/>
   </Routes>
   </BrowserRouter>
  </div>
