@@ -1,20 +1,27 @@
 import React from 'react';
 import '../profile.css';
-import avatar from '../../../img/Elon_mask.jpg';
-import avatar_mini from '../../../img/Elon_Mask_small.jpg';
 import Post from './post/Post.js';
+import { onPostChange } from '../../../data/state';
+let postText=React.createRef();
 function Posts(props) {
+  let onPostChange=()=>{
+    props.onPostChange(postText.current.value);
+    console.log(postText)
+  };
+  let addPost=()=>{
+    props.addPost(postText.current.value);
+    postText.current.value="";
+    console.log(postText)
+  };
   return (
   <div className='posts'>
     <h2>Мои посты</h2>
-    <input placeholder='введите текст' />
-     <button>добавить пост</button>
+     <input  onChange={onPostChange} value={props.newPostText} ref={postText} placeholder='введите текст' />
+     <button onClick={addPost}>добавить пост</button>
      {props.postsData.map((element)=><Post message={element.text} id={element.id} likes={element.likes}/>) }
-     
-
-
   </div>
   );
 }
 
 export default Posts;
+
