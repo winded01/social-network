@@ -7,10 +7,10 @@ let messageText=React.createRef();
 
 function Dialogs(props) {
   let sendMessage=()=>{
-    props.sendMessage(messageText.current.value);
+    props.dispatch({type:'SEND-MESSAGE'});
   }
    let onMessageChange=()=>{
-    props.onMessageChange(messageText.current.value);
+    props.dispatch({type:'MESSAGE-CHANGE',text:messageText.current.value});
    }
   return (
  <div className='dialogs'>

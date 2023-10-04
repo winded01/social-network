@@ -36,7 +36,7 @@ let store={
    getState(){
       return this._state;
    },
-
+/*
    addPost(postText){
        let newPost={
            text:postText,
@@ -64,11 +64,41 @@ let store={
       this._state.dialogsPage.newMessageText=text;
       this.renderTree( this._state);
     },
+*/
     renderTree(){
        console.log("fake function");
     },
      subscribe(observer){
        this.renderTree=observer;
+    },
+    dispatch (action){
+      if(action.type=='ADD-POST'){
+         let newPost={
+            text:this._state.profilePage.newPostText,
+            id:4,
+            likes:0
+        }
+     this._state.profilePage.postsData.unshift(newPost);
+     this._state.profilePage.newPostText="";
+     this.renderTree(this._state);
+      } 
+      else if(action.type=='POST-CHANGE'){
+         this._state.profilePage.newPostText=action.text;
+         this.renderTree( this._state);
+      }
+      else if(action.type=='SEND-MESSAGE'){
+         let newMessage={
+            message:this._state.dialogsPage.newMessageText,
+            id:4
+         }
+         this._state.dialogsPage.messagesData.push(newMessage);
+         this._state.dialogsPage.newMessageText="";
+         this.renderTree( this._state);
+      }
+      else if(action.type=='MESSAGE-CHANGE'){
+         this._state.dialogsPage.newMessageText=action.text;
+         this.renderTree( this._state);
+      }
     }
 }
 export default store;

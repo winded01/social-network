@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let renderTree=(state)=>{
   root.render(
     <React.StrictMode>
-      <App  state={state} addPost={store.addPost.bind(store)} sendMessage={store.sendMessage.bind(store)} onPostChange={store.onPostChange.bind(store)} onMessageChange={store.onMessageChange.bind(store)}/>
+      <App  state={state} dispatch={store.dispatch.bind(store)}/>
     </React.StrictMode>
   );
 }

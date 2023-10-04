@@ -5,13 +5,11 @@ import { onPostChange } from '../../../data/state';
 let postText=React.createRef();
 function Posts(props) {
   let onPostChange=()=>{
-    props.onPostChange(postText.current.value);
-    console.log(postText)
+    props.dispatch({type:'POST-CHANGE',text:postText.current.value})
   };
   let addPost=()=>{
-    props.addPost(postText.current.value);
+    props.dispatch({type:'ADD-POST'});
     postText.current.value="";
-    console.log(postText)
   };
   return (
   <div className='posts'>
